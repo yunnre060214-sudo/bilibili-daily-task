@@ -4,8 +4,13 @@
 name: run_task
 
 on:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'  # 保持原有定时（北京早上8点左右，根据你时区）
+  - cron: "23 16 * * *"
   workflow_dispatch:     # ← 新增这一行！允许手动触发
 
 jobs:
